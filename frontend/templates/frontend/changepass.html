@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <title>Change your password</title>
+  <link rel="stylesheet" href="{% static 'frontend/css/changepass.css' %}">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container-pass">
+      <div class="pass-card">
+        <h3>Password Criteria</h3>
+        <p>Please check that your password meet the following criteria:-</p>
+        <p>1. Password length should lie between <span>6</span> to <span>12</span> characters.</p>
+        <p>2. Password should contain <span>Atleast One</span> capital letter.</p>
+        <p>3. Password should contain <span>Atleast One</span> special character & a digit.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <header>Confirm Password Check</header>
+      <form action="#">
+        <div class="error-text"></div>
+        <div class="field">
+          <input onkeyup="active()" id="pswrd_1" type="password" placeholder="Enter Password">
+        </div>
+        <div class="field">
+          <input onkeyup="active_2()" id="pswrd_2" disabled type="password" placeholder="Confirm Password">
+          <div class="show">SHOW</div>
+        </div>
+        <button disabled>Check</button>
+      </form>
+      <p><span>NOTE:-</span>Moving to next field is prohibited until password criteria is satisfied.!!</p>
+    </div>
+  </div>
+
+  <script>
+    const pswrd_1 = document.querySelector("#pswrd_1");
+    const pswrd_2 = document.querySelector("#pswrd_2");
+    const errorText = document.querySelector(".error-text");
+    const showBtn = document.querySelector(".show");
+    const btn = document.querySelector("button");
+    function active() {
+      if (pswrd_1.value.match(/[a-z]/g) && pswrd_1.value.match(/[A-Z]/g) &&
+        pswrd_1.value.match(/[0-9]/g) &&
+        pswrd_1.value.match(/[^a-zA-Z\d]/g) &&
+        pswrd_1.value.length >= 8 &&
+        pswrd_1.value.length <= 12) {
+        btn.removeAttribute("disabled", "");
+        btn.classList.add("active");
+        pswrd_2.removeAttribute("disabled", "");
+      } else {
+        btn.setAttribute("disabled", "");
+        btn.classList.remove("active");
+        pswrd_2.setAttribute("disabled", "");
+      }
+    }
+    btn.onclick = function () {
+      if (pswrd_1.value != pswrd_2.value) {
+        errorText.style.display = "block";
+        errorText.classList.remove("matched");
+        errorText.textContent = "Error! Confirm Password Not Match";
+        return false;
+      } else {
+        errorText.style.display = "block";
+        errorText.classList.add("matched");
+        errorText.textContent = "Nice! Confirm Password Matched";
+        return false;
+      }
+    }
+    function active_2() {
+      if (pswrd_2.value != "") {
+        showBtn.style.display = "block";
+        showBtn.onclick = function () {
+          if ((pswrd_1.type == "password") && (pswrd_2.type == "password")) {
+            pswrd_1.type = "text";
+            pswrd_2.type = "text";
+            this.textContent = "Hide";
+            this.classList.add("active");
+          } else {
+            pswrd_1.type = "password";
+            pswrd_2.type = "password";
+            this.textContent = "Show";
+            this.classList.remove("active");
+          }
+        }
+      } else {
+        showBtn.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+
+</html>

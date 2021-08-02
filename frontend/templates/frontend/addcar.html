@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet"
+        type="text/css" />
+
+
+    <link rel="stylesheet" href="{% static 'frontend/css/addcar.css' %}" />
+    <title>Add Car</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="#" class="sign-in-form" autocomplete="off">
+                    <h2 class="title">Add Car</h2>
+
+                    <div class="input-field">
+                        <i class="far fa-address-card"></i>
+                        <input type="text" placeholder="License plate number" required pattern="^[0-9 a-z A-Z]+$"
+                            title="Only alphabets and numbers are allowed" />
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <input type="text" placeholder="Pickup & Drop Location" required pattern="^[0-9 a-z A-Z]+$" />
+                    </div>
+
+                    <div class="datawrap">
+                        <div class="input-field" style="width: 30%;">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <input type="text" placeholder="Rent per day" required pattern="^[0-9]+$"
+                                title="Payment is only in numbers" />
+                        </div>
+                        &emsp;
+                        <div class="input-field" style="width: 30%;">
+                            <i class="far fa-building"></i>
+                            <input type="text" placeholder="No. of Seats" required
+                                pattern="^([1][0-9]?|[2]|[3]|[4]|[5]|[6]|[7]|[8]|[9])$"
+                                title="Seats can be between 1 & 19" />
+                        </div>
+                        &emsp;
+                        <div class="input-field" style="width: 30%;">
+                            <i class="fas fa-car"></i>
+                            <input type="text" placeholder="Buying Year" required
+                                pattern="^(19[6789]\d|20[01]\d|20[0-2][0-1])+$"
+                                title="Please enter year in YYYY format ranging from 1960 - 2021" />
+                        </div>
+                    </div>
+
+                    <div class="datawrap">
+                        <div class="input-date">
+                            <i class="far fa-calendar-alt"></i>
+                            <input type="text" placeholder="Start Date" id="txtFrom" required />
+                        </div>
+                        <div class="input-date">
+                            <i class="far fa-calendar-alt"></i>
+                            <input type="text" placeholder="End Date" id="txtTo" required />
+                        </div>
+                    </div>
+
+                    <div class="datawrap">
+                        <div class="input-field" style="width: 46%;">
+                            <i class="far fa-building"></i>
+                            <input type="text" placeholder="Company Name" required pattern="^[0-9 a-z A-Z]+$"
+                                title="Only alphabets and numbers are allowed" />
+                        </div>
+                        &emsp;&ensp;
+                        <div class="input-field" style="width: 46%;">
+                            <i class="fas fa-car"></i>
+                            <input type="text" placeholder="Model Name" required pattern="^[0-9 a-z A-Z]+$"
+                                title="Only alphabets and numbers are allowed" />
+                        </div>
+                    </div>
+
+                    <div class="datawrap">
+                        <div class="select">
+                            <select name="slct" id="slct" required>
+                                <option selected disabled value="">Fuel Type</option>
+                                <option value="1">Petrol</option>
+                                <option value="2">Diesel</option>
+                                <option value="3">Gas</option>
+                                <option value="4">Electric</option>
+                            </select>
+                        </div>
+
+                        <div class="select">
+                            <select name="slct" id="slct" required>
+                                <option selected disabled value="">Car Category</option>
+                                <option value="1">Sedan</option>
+                                <option value="2">Hatchback</option>
+                                <option value="3">Luxury</option>
+                                <option value="4">Sports</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="datawrap">
+                        <div class="select">
+                            <select name="slct" id="slct" required>
+                                <option selected disabled value="">Air Conditioning</option>
+                                <option value="1">AC</option>
+                                <option value="2">Non-AC</option>
+                            </select>
+                        </div>
+
+                        <div class="select">
+                            <select name="slct" id="slct" required>
+                                <option selected disabled value="">Gear Shift</option>
+                                <option value="1">Automatic</option>
+                                <option value="2">Manual</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="file-upload">
+                        <div class="file-upload-select1">
+                            <div class="file-select-button">Front car image</div>
+                            <div class="file-select-name1">No file chosen...</div>
+                            <input type="file" name="file-upload-front" id="file-upload-front" accept="image/*"
+                                required>
+                        </div>
+                    </div>
+                    <div class="file-upload">
+                        <div class="file-upload-select2">
+                            <div class="file-select-button">Back car image</div>
+                            <div class="file-select-name2">No file chosen...</div>
+                            <input type="file" name="file-upload-back" id="file-upload-back" accept="image/*">
+                        </div>
+                    </div>
+
+                    <!-- Car images, buying year and issues -->
+                    <input type="submit" value="Add Car" class="btn solid" />
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>What is Add Car ?</h3>
+                    <p>
+                        The "Add Car" feature allows you to book a car on rent for any period of time for which the car
+                        is available.
+                    </p>
+                </div>
+                <img src="{% static 'frontend/img/Signup.svg' %}" class="image" alt="" />
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $("[id*=txtFrom]").datepicker({
+                minDate: new Date(),
+                onSelect: function (selected) {
+                    var dt = new Date(selected);
+                    dt.setDate(dt.getDate() + 1);
+                    $("#txtTo").datepicker("option", "minDate", dt);
+                }
+            });
+            $("[id*=txtTo]").datepicker({
+                onSelect: function (selected) {
+                    var dt = new Date(selected);
+                    dt.setDate(dt.getDate() - 1);
+                    $("#txtFrom").datepicker("option", "maxDate", dt);
+                }
+            });
+        });
+
+    </script>
+    <script src="{% static 'frontend/js/addcar.js' %}"></script>
+</body>
+
+</html>

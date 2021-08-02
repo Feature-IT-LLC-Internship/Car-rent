@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  {% load static %}
+  <title>FIIP</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'frontend/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'frontend/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <script src="https://kit.fontawesome.com/e28b7aacf0.js" crossorigin="anonymous"></script>
+  <link href="{% static 'frontend/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'frontend/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'frontend/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'frontend/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'frontend/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'frontend/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'frontend/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'frontend/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">Ca<span>Rent</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="../img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#features">Services</a></li>
+          <li><a class="nav-link scrollto" href="#about">Process</a></li>
+          <li><a class="nav-link scrollto" href="#services">Cars</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="{% url 'signup' %}" class="login-btn scrollto">Login / Sign Up</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+          <br>
+          <br>
+          <h1>Relish Car Rental Services With Ca<span>Rent</span></h1>
+          <h2>The cars of your Choice</h2>
+        </div>
+      </div>
+      <br>
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <br>
+            <button class="btn btn-lg btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Why Us...?</h2>
+          <p>Take a look at the services...</p>
+        </div>
+
+        <div class="boxesContainer">
+
+          <div class="cardBox">
+            <div class="card">
+              <div class="front">
+                <div class="front-img"></div>
+                <div class="front-content">
+                  <h3>Insurance</h3>
+                </div>
+              </div>
+              <div class="back">
+                <h3>Insurance</h3>
+                <p><br><br> Looking for a car to rent but worried about insurance?? <br> <span style="color: #ffc351;">
+                    Your search is over.</span> <br> All our cars verified and insured. </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardBox">
+            <div class="card">
+              <div class="front">
+                <div class="front-img"></div>
+                <div class="front-content">
+                  <h3>Budget</h3>
+                </div>
+              </div>
+              <div class="back">
+                <h3>Budget</h3>
+                <p><br><br> Worried about budget?? <br>You Don't need to. <br> <span style="color: #ffc351;">Pocket
+                    friendly</span> Cars are waiting for you. Just have a look</p>
+              </div>
+            </div>
+          </div>
+          <div class="cardBox">
+            <div class="card">
+              <div class="front">
+                <div class="front-img"></div>
+                <div class="front-content">
+                  <h3>Security</h3>
+                </div>
+              </div>
+              <div class="back">
+                <h3>Security</h3>
+                <p><br><br> Worrying about safety and security?? <br> Just sit back and relax <br> <span
+                    style="color: #ffc351;">Cars coming your way
+                    are properly verified.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="cardBox">
+            <div class="card">
+              <div class="front">
+                <div class="front-img"></div>
+                <div class="front-content">
+                  <h3>24X7 Support</h3>
+                </div>
+              </div>
+              <div class="back">
+                <h3>24X7 Support</h3>
+                <p><br><br>Wandering what would have happen if we run into any problem?? <br> <span
+                    style="color: #ffc351;">We are here 24*7 to assist you and solve all your queries.</span></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+    <!-- End Features Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{% static 'frontend/img/about.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <h3>Let's take a walkthrough of the process</h3><br>
+            <p>
+              Rent a car...
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Select the car you want to rent</li>
+              <li><i class="ri-check-double-line"></i> Select the time for renting the car and the advance payment</li>
+              <li><i class="ri-check-double-line"></i> Provide your identification & That's It</li>
+            </ul>
+            <br>
+            <p>
+              Provide your car on Rent
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Fill out the car rental form</li>
+              <li><i class="ri-check-double-line"></i> Select the time for renting the car </li>
+              <li><i class="ri-check-double-line"></i> Provide your identification & We will get back to you with the
+                confirmation</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Cars</h2>
+          <p>Check out our Fleet</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <img src="{% static 'frontend/img/car/city.jpg' %}" class="img-fluid" alt="">
+              <h4><a href="">Honda City</a></h4>
+              <p>Sedan Class, Automatic gear shift, petrol fueled AC car.</p><br>
+              <a href="{% url 'bookcar' %}" class="booknow-btn">Book Now</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+            data-aos-delay="200">
+            <div class="icon-box">
+              <img src="{% static 'frontend/img/car/innova.jpeg' %}" class="img-fluid" alt="">
+              <h4><a href="">Innova</a></h4>
+              <p>MUV Class, Automatic gear shift, diesel fueled AC car.</p><br>
+              <a href="{% url 'bookcar' %}" class="booknow-btn">Book Now</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
+            data-aos-delay="300">
+            <div class="icon-box">
+              <img src="{% static 'frontend/img/car/i20.jpg' %}" class="img-fluid" alt="">
+              <h4><a href="">i20</a></h4>
+              <p>Hatchback Class, manual gear shift, diesel fueled AC car.</p><br>
+              <a href="{% url 'bookcar' %}" class="booknow-btn">Book Now</a>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <h3>Explore</h3>
+            <p> We have got a great collection of vehicles that might interest you. Click the explore button to see more
+            </p>
+            <a class="cta-btn" href="{% url 'rentcar' %}">Explore</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End Services Section -->
+
+    <!-- ======= Play Store Section ======= -->
+    <div class="page-content page-container" id="page-content" data-aos="fade-up" data-aos-delay="150">
+      <div class="padding">
+        <div class="row play-container d-flex justify-content-center">
+          <div class="template-demo mt-2">
+            <div class="text-center">
+              <h3>Get Our Mobile Applications</h3>
+              <p> We are now on <span> Google Play Store</span> & <span>Apple store</span> </p>
+            </div>
+            <button class="btn btn-outline-dark btn-icon-text">
+              <i class="fa fa-apple btn-icon-prepend mdi-36px"></i>
+              <span class="d-inline-block text-left">
+                <small class="font-weight-light d-block">Available on the</small> App Store
+              </span>
+            </button>
+            <button class="btn btn-outline-dark btn-icon-text">
+              <i class="fab fa-google-play btn-icon-prepend mdi-36px"></i>
+              <span class="d-inline-block text-left">
+                <small class="font-weight-light d-block">Get it on the</small> Google Play </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Play Store -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </div>
+
+        <div>
+          <iframe style="border:0; width: 100%; height: 270px;"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1932.4998172451726!2d-97.75557864079163!3d30.341764075071342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644cae2f96fffff%3A0xeb7209fa2a453ee9!2s5900%20Balcones%20Dr%20%23100%2C%20Austin%2C%20TX%2078731%2C%20USA!5e0!3m2!1sen!2sin!4v1623826213051!5m2!1sen!2sin"
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>5900 BALCONIES DR STE 100 AUSTIN, TX 78731-4298</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="{% static 'frontend/forms/contact.php' %}" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Let's<span> GO</span></h3>
+              <p>
+                5900 BALCONIES DR STE 100<br>
+                AUSTIN, TX 78731-4298<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-google"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Cars</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Subscribe to our newsletter and we will notify you of news deals on cars to your Mail</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'frontend/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'frontend/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'frontend/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'frontend/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'frontend/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'frontend/vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'frontend/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'frontend/js/main.js' %}"></script>
+
+</body>
+
+</html>

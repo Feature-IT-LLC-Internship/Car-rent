@@ -1,0 +1,54 @@
+jimmy aghera10:15 AM
+phone = user_phone(user)
+        city = user_city(user)
+        license = user_license(user)
+
+jimmy aghera10:16 AM
+, user_city, user_license, user_phone
+
+jimmy aghera10:28 AM
+phone = data.get("phone") #
+        city = data.get("city") #
+        license = data.get("license") #
+        first_name = data.get("first_name")
+        last_name = data.get("last_name")
+        email = data.get("email")
+        username = data.get("username")
+        user_email(user, email)
+        user_username(user, username)
+        user_phone(user, phone)
+        user_city(user, city)
+        user_license(user, license)
+
+jimmy aghera10:29 AM
+def user_phone(user, *args):
+    return user_field(user, app_settings.USER_MODEL_PHONE_FIELD, *args)
+
+def user_city(user, *args):
+    return user_field(user, app_settings.USER_MODEL_CITY_FIELD, *args)
+
+def user_license(user, *args):
+    return user_field(user, app_settings.USER_MODEL_LICENSE_FIELD, *args)
+
+jimmy aghera10:32 AM
+ @property
+    def USER_MODEL_PHONE_FIELD(self):
+        return self._setting("USER_MODEL_PHONE_FIELD", "phone")
+
+    @property
+    def USER_MODEL_CITY_FIELD(self):
+        return self._setting("USER_MODEL_CITY_FIELD", "city")
+
+    @property
+    def USER_MODEL_LICENSE_FIELD(self):
+        return self._setting("USER_MODEL_LICENSE_FIELD", "license")
+
+jimmy aghera11:11 AM
+filter_overrides = {
+             models.BooleanField: {
+                 'filter_class': django_filters.BooleanFilter,
+                 'extra': lambda f: {
+                     'AC': forms.CheckboxInput,
+                 },
+             },
+         }
